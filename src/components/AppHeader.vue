@@ -17,7 +17,10 @@ export default {
 
 <template>
   <header>
-    <slider-base :images="headerSlider" target="header_slider">
+    <slider-base
+      :images="headerSlider"
+      target="header_slider"
+      dotClass="double">
       <div class="container d-flex align-items-center">
         <app-logo></app-logo>
         <navbar-base :links="headerLinks"></navbar-base>
