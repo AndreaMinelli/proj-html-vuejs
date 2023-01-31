@@ -1,19 +1,27 @@
 <script>
-import { headerLinks } from "../data";
+import { headerLinks, headerSlider } from "../data";
 import AppLogo from "./AppLogo.vue";
 import NavbarBase from "./NavbarBase.vue";
+import SliderBase from "./SliderBase.vue";
 export default {
   name: "AppHeader",
-  components: { AppLogo, NavbarBase },
+  components: { AppLogo, NavbarBase, SliderBase },
   data() {
     return {
       headerLinks,
+      headerSlider,
     };
   },
 };
 </script>
 
 <template>
-  <app-logo></app-logo>
-  <navbar-base :links="headerLinks"></navbar-base>
+  <header>
+    <slider-base :images="headerSlider">
+      <div class="container d-flex align-items-center">
+        <app-logo></app-logo>
+        <navbar-base :links="headerLinks"></navbar-base>
+      </div>
+    </slider-base>
+  </header>
 </template>

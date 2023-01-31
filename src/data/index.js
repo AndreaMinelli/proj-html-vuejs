@@ -24,5 +24,19 @@ const headerLinks = [
     href: "#",
   },
 ];
+const headerSlider = [
+  {
+    pic: "slider-1.jpg",
+    description: "image-1",
+  },
+  {
+    pic: "slider-2.jpg",
+    description: "image-2",
+  },
+  {
+    pic: "slider-3.jpg",
+    description: "image-3",
+  },
+];
 
-export { headerLinks };
+export { headerLinks, headerSlider };
