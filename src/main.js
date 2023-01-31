@@ -1,7 +1,7 @@
 import { createApp } from "vue";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "@fontsource/merriweather";
-import "@fontsource/merriweather-sans";
+import "@fontsource/open-sans-condensed";
 import { fontAwesome } from "./data/fontawesome.js";
 import App from "./App.vue";
 
