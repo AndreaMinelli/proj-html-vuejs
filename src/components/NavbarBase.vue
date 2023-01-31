@@ -24,6 +24,7 @@ ul {
     text-transform: uppercase;
     color: white;
     margin: 0 15px;
+    font-size: 20px;
   }
 }
 </style>
