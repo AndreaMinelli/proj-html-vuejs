@@ -33,7 +33,7 @@ export default {
     },
   },
   created() {
-    this.autoplay();
+    // this.autoplay();
   },
 };
 </script>

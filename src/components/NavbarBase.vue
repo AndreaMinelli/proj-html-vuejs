@@ -22,7 +22,8 @@ ul {
   align-items: center;
   a {
     text-transform: uppercase;
-    font-weight: bold;
+    color: white;
+    margin: 0 15px;
   }
 }
 </style>
