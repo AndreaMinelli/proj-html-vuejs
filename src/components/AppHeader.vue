@@ -32,7 +32,10 @@ export default {
       <div class="container">
         <div class="d-flex align-items-center py-4 justify-content-between">
           <app-logo class="w-25"></app-logo>
-          <navbar-base :links="headerLinks" class="flex-grow-1"></navbar-base>
+          <navbar-base
+            :links="headerLinks"
+            class="flex-grow-1"
+            listType="link"></navbar-base>
           <header-function></header-function>
         </div>
         <header-jumbotron></header-jumbotron>
