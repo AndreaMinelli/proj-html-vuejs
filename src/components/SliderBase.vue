@@ -8,17 +8,28 @@ export default {
   },
   props: {
     images: Array,
+    target: String,
   },
   methods: {
     buildImagePath(image) {
-      return new URL(
-        `../assets/img/header_slider/${image.pic}`,
-        import.meta.url
-      ).href;
+      return new URL(`../assets/img/${this.target}/${image}`, import.meta.url)
+        .href;
     },
     isActive(i) {
       return i === this.currentActive;
     },
+    autoplay() {
+      setInterval(() => {
+        if (this.currentActive < this.images.length - 1) {
+          this.currentActive++;
+        } else {
+          this.currentActive = 0;
+        }
+      }, 3000);
+    },
+  },
+  created() {
+    this.autoplay();
   },
 };
 </script>
