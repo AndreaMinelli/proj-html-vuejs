@@ -28,7 +28,8 @@ export default {
     <bg-slider-base
       :images="headerSlider"
       target="header_slider"
-      dotClass="double">
+      dotClass="double"
+      :sliderClasses="['center']">
       <div class="container">
         <div class="d-flex align-items-center py-4 justify-content-between">
           <app-logo class="w-25"></app-logo>

@@ -69,9 +69,16 @@ export default {
 
 <style lang="scss" scoped>
 .slider {
-  background-position: center;
   background-repeat: no-repeat;
   background-size: auto;
+
+  &.center {
+    background-position: center;
+  }
+
+  &.top {
+    background-position: top;
+  }
 }
 
 .dot {

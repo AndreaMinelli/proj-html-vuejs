@@ -41,7 +41,7 @@ export default {
     :images="bgImages"
     target="section_image/user_stories"
     @change-active="changeUser"
-    :sliderClasses="['py-5']">
+    :sliderClasses="['py-5', 'top']">
     <div class="container">
       <div
         class="carousel d-flex align-items-center justify-content-center flex-column">
