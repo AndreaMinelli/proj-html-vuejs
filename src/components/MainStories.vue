@@ -2,7 +2,7 @@
 import CarouselBase from "./ui_components/CarouselBase.vue";
 import { userStories } from "../data";
 export default {
-  name: "StoriesCarousel",
+  name: "MainStories",
   components: { CarouselBase },
   data() {
     return {
