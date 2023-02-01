@@ -28,6 +28,16 @@ export default {
         colClasses: ["px-3", "mt-5"],
         figureClasses: ["pt-5"],
       },
+      sectionCourses: {
+        id: "courses",
+        title: "Popular Online Courses",
+        subTitle:
+          "Lorem ipsum gravida nibh vel velit auctor aliquetnean sollicitudin, lorem quis bibendum auci elit consequat ipsutis sem nibh id elit",
+        image: "",
+        rowClasses: ["row-cols-1"],
+        colClasses: ["text-center"],
+        subTitleClasses: ["w-75", "m-auto"],
+      },
     };
   },
 };
@@ -60,6 +70,7 @@ export default {
     <stories-carousel></stories-carousel>
     <main-program></main-program>
   </section-base>
+  <section-base :section="sectionCourses"></section-base>
 </template>
 
 <style lang="scss" scoped>

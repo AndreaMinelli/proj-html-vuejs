@@ -21,7 +21,7 @@ export default {
       <div class="row" :class="section.rowClasses">
         <div class="col my-4" :class="section.colClasses">
           <h2 :class="section.titleClasses">{{ section.title }}</h2>
-          <p>{{ section.subTitle }}</p>
+          <p :class="section.subTitleClasses">{{ section.subTitle }}</p>
           <slot name="more-info"></slot>
         </div>
         <div v-if="section.image" class="col" :class="section.colClasses">
