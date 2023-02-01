@@ -3,6 +3,13 @@
 body {
   font-family: $primary-font;
 }
+
+section {
+  padding: 50px 0;
+  border-top: 1px solid $grey-border;
+  border-bottom: 1px solid $grey-border;
+}
+
 img {
   max-width: 100%;
   display: block;

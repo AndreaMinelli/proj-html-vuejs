@@ -6,8 +6,8 @@ export default {
     listType: String,
   },
   methods: {
-    buildImageUrl(image) {
-      return new URL(`../assets/img/main_nav/${image}.png`, import.meta.url)
+    buildImageUrl(image, target) {
+      return new URL(`../assets/img/${target}/${image}.png`, import.meta.url)
         .href;
     },
   },
@@ -18,7 +18,7 @@ export default {
   <ul :class="listType">
     <li v-for="link in links" :key="link.text">
       <figure v-if="link.image">
-        <img :src="buildImageUrl(link.image)" :alt="link.image" />
+        <img :src="buildImageUrl(link.image, 'main_nav')" :alt="link.image" />
       </figure>
       <a :href="link.href">{{ link.text }}</a>
     </li>
@@ -26,10 +26,12 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+@use "../assets/scss/variables" as *;
 ul {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0;
   &.link {
     a {
       text-transform: uppercase;
@@ -41,21 +43,22 @@ ul {
 
   &.cs-card {
     li {
-      height: 150px;
+      height: 200px;
       width: calc(100% / 6);
-      border: 2px solid #f2f2f2;
-      background-color: #f2f8fc;
+      border: 2px solid $grey-border;
+      background-color: $lightblue-bg;
       margin: 50px 10px;
       display: flex;
       align-items: center;
       justify-content: center;
       flex-direction: column;
+      padding: 30px 0;
     }
     a {
       text-transform: capitalize;
       font-size: 20px;
       font-weight: bolder;
-      margin: 30px 0;
+      margin: 20px 0;
     }
   }
 }

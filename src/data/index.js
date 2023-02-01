@@ -32,9 +32,9 @@ const mainNavLinks = [
     image: "language",
   },
   {
-    text: "chemistry",
+    text: "software",
     href: "#",
-    image: "chemistry",
+    image: "software",
   },
   {
     text: "business",
@@ -42,9 +42,9 @@ const mainNavLinks = [
     image: "business",
   },
   {
-    text: "craft",
+    text: "chemistry",
     href: "#",
-    image: "craft",
+    image: "chemistry",
   },
   {
     text: "science",
@@ -52,9 +52,9 @@ const mainNavLinks = [
     image: "science",
   },
   {
-    text: "software",
+    text: "DIY&Craft",
     href: "#",
-    image: "software",
+    image: "craft",
   },
 ];
 
