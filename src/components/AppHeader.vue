@@ -2,7 +2,7 @@
 import { headerLinks, headerSlider } from "../data";
 import AppLogo from "./AppLogo.vue";
 import NavbarBase from "./NavbarBase.vue";
-import SliderBase from "./SliderBase.vue";
+import BgSliderBase from "./BgSliderBase.vue";
 import HeaderFunction from "./header_child/HeaderFunction.vue";
 import HeaderJumbotron from "./header_child/HeaderJumbotron.vue";
 export default {
@@ -10,7 +10,7 @@ export default {
   components: {
     AppLogo,
     NavbarBase,
-    SliderBase,
+    BgSliderBase,
     HeaderFunction,
     HeaderJumbotron,
   },
@@ -25,7 +25,7 @@ export default {
 
 <template>
   <header>
-    <slider-base
+    <bg-slider-base
       :images="headerSlider"
       target="header_slider"
       dotClass="double">
@@ -40,6 +40,6 @@ export default {
         </div>
         <header-jumbotron></header-jumbotron>
       </div>
-    </slider-base>
+    </bg-slider-base>
   </header>
 </template>
