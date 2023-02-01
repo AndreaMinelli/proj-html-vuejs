@@ -2,7 +2,7 @@
 import { headerLinks, headerSlider } from "../data";
 import AppLogo from "./AppLogo.vue";
 import NavbarBase from "./NavbarBase.vue";
-import BgSliderBase from "./BgSliderBase.vue";
+import CarouselBase from "./ui_components/CarouselBase.vue";
 import HeaderFunction from "./header_child/HeaderFunction.vue";
 import HeaderJumbotron from "./header_child/HeaderJumbotron.vue";
 export default {
@@ -10,37 +10,61 @@ export default {
   components: {
     AppLogo,
     NavbarBase,
-    BgSliderBase,
     HeaderFunction,
     HeaderJumbotron,
+    CarouselBase,
   },
   data() {
     return {
       headerLinks,
       headerSlider,
+      currentIndex: 0,
     };
+  },
+  computed: {
+    buildBgUrl() {
+      return new URL(
+        `../assets/img/header_slider/${this.headerSlider[this.currentIndex]}`,
+        import.meta.url
+      ).href;
+    },
+  },
+  methods: {
+    changeIndex(i) {
+      this.currentIndex = i - 1;
+    },
   },
 };
 </script>
 
 <template>
-  <header>
-    <bg-slider-base
-      :images="headerSlider"
-      target="header_slider"
-      dotClass="double"
-      :sliderClasses="['center']">
-      <div class="container">
-        <div class="d-flex align-items-center py-4 justify-content-between">
-          <app-logo class="w-25"></app-logo>
-          <navbar-base
-            :links="headerLinks"
-            class="flex-grow-1"
-            listType="link"></navbar-base>
-          <header-function></header-function>
-        </div>
-        <header-jumbotron></header-jumbotron>
+  <header
+    :style="{
+      backgroundImage: `url(${buildBgUrl})`,
+    }">
+    <div class="container">
+      <div class="d-flex align-items-center py-4 justify-content-between">
+        <app-logo class="w-25"></app-logo>
+        <navbar-base
+          :links="headerLinks"
+          class="flex-grow-1"
+          listType="link"></navbar-base>
+        <header-function></header-function>
       </div>
-    </bg-slider-base>
+      <header-jumbotron></header-jumbotron>
+    </div>
+    <carousel-base
+      :times="3"
+      :dotClass="['double']"
+      @change-active="changeIndex"></carousel-base>
   </header>
 </template>
+
+<style lang="scss" scoped>
+header {
+  background-image: url("../assets/img/header_slider/slider-1.jpg");
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center;
+}
+</style>
