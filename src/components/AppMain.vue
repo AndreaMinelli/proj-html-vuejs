@@ -1,9 +1,9 @@
 <script>
 import NavbarBase from "./NavbarBase.vue";
 import SectionBase from "./SectionBase.vue";
-import StoriesCarousel from "./StoriesCarousel.vue";
+import StoriesCarousel from "./MainStories.vue";
 import MainProgram from "./main_child/MainProgram.vue";
-import CoursesCarousel from "./CoursesCarousel.vue";
+import MainCourses from "./MainCourses.vue";
 import { mainNavLinks } from "../data";
 export default {
   name: "AppMain",
@@ -12,7 +12,7 @@ export default {
     SectionBase,
     StoriesCarousel,
     MainProgram,
-    CoursesCarousel,
+    MainCourses,
   },
   data() {
     return {
@@ -41,6 +41,7 @@ export default {
         subTitle:
           "Lorem ipsum gravida nibh vel velit auctor aliquetnean sollicitudin, lorem quis bibendum auci elit consequat ipsutis sem nibh id elit",
         image: "",
+        bgImage: "background-pattern.jpg",
         rowClasses: ["row-cols-1"],
         colClasses: ["text-center"],
         subTitleClasses: ["w-75", "m-auto"],
@@ -78,7 +79,7 @@ export default {
     <main-program></main-program>
   </section-base>
   <section-base :section="sectionCourses">
-    <courses-carousel></courses-carousel>
+    <main-courses></main-courses>
   </section-base>
 </template>
 

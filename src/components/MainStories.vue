@@ -1,21 +1,15 @@
 <script>
-import BgSliderBase from "./BgSliderBase.vue";
+import CarouselBase from "./ui_components/CarouselBase.vue";
 import { userStories } from "../data";
 export default {
   name: "StoriesCarousel",
-  components: { BgSliderBase },
+  components: { CarouselBase },
   data() {
     return {
       activeUser: 0,
     };
   },
   computed: {
-    bgImages() {
-      return userStories.map((user) => {
-        const bgImage = user.bgImage;
-        return bgImage;
-      });
-    },
     displayUser() {
       return userStories.find((user, i) => {
         return i === this.activeUser;
@@ -30,36 +24,35 @@ export default {
   },
   methods: {
     changeUser(i) {
-      this.activeUser = i;
+      this.activeUser = i - 1;
     },
   },
 };
 </script>
 
 <template>
-  <bg-slider-base
-    :images="bgImages"
-    target="section_image/user_stories"
-    @change-active="changeUser"
-    :sliderClasses="['py-5', 'top']">
+  <div class="carousel">
     <div class="container">
-      <div
-        class="carousel d-flex align-items-center justify-content-center flex-column">
+      <div class="d-flex align-items-center justify-content-center flex-column">
         <figure class="my-5">
           <img :src="buildImageUrl" :alt="displayUser.name" />
         </figure>
         <blockquote>{{ displayUser.quote }}</blockquote>
         <h3>{{ displayUser.name }}</h3>
         <p class="job">{{ displayUser.job }}</p>
+        <carousel-base :times="3" @change-active="changeUser"></carousel-base>
       </div>
     </div>
-  </bg-slider-base>
+  </div>
 </template>
 
 <style lang="scss" scoped>
 @use "../assets/scss/variables" as *;
 .carousel {
   color: white;
+  background-image: url("../assets/img/section_image/user_stories/h5-parallax-img-1.png");
+  background-position: top;
+  padding: 50px 0;
 
   blockquote {
     width: 75%;

@@ -11,12 +11,22 @@ export default {
         import.meta.url
       ).href;
     },
+    buildBgImageUrl() {
+      return new URL(
+        `../assets/img/section_image/${this.section.bgImage}`,
+        import.meta.url
+      ).href;
+    },
   },
 };
 </script>
 
 <template>
-  <section :id="section.id">
+  <section
+    :id="section.id"
+    :style="{
+      backgroundImage: `url(${buildBgImageUrl})`,
+    }">
     <div class="container">
       <div class="row" :class="section.rowClasses">
         <div class="col my-4" :class="section.colClasses">
@@ -37,6 +47,10 @@ export default {
 
 <style lang="scss" scoped>
 @use "../assets/scss/variables" as *;
+
+section {
+  background-position: center;
+}
 h2 {
   font-family: $secondary-font;
   font-size: 40px;
