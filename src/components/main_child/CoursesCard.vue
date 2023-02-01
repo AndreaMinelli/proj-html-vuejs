@@ -12,6 +12,12 @@ export default {
         return this.course.price;
       }
     },
+    buildImageLink() {
+      return new URL(
+        `../../assets/img/section_image/courses_image/${this.course.image}`,
+        import.meta.url
+      ).href;
+    },
   },
 };
 </script>
@@ -20,9 +26,7 @@ export default {
   <div class="col">
     <div class="course-card">
       <figure>
-        <img
-          src="../../assets/img/section_image/courses_image/course-1-f-img.jpg"
-          alt="" />
+        <img :src="buildImageLink" :alt="course.name" />
       </figure>
       <div class="card-bottom">
         <div class="d-flex justify-content-between align-items-center">
@@ -56,6 +60,7 @@ export default {
 
   .card-bottom {
     padding: 30px 20px;
+    background-color: white;
 
     h4 {
       font-family: $secondary-font;
