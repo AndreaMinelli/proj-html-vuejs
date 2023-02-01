@@ -3,10 +3,17 @@ import NavbarBase from "./NavbarBase.vue";
 import SectionBase from "./SectionBase.vue";
 import StoriesCarousel from "./StoriesCarousel.vue";
 import MainProgram from "./main_child/MainProgram.vue";
+import CoursesCarousel from "./CoursesCarousel.vue";
 import { mainNavLinks } from "../data";
 export default {
   name: "AppMain",
-  components: { NavbarBase, SectionBase, StoriesCarousel, MainProgram },
+  components: {
+    NavbarBase,
+    SectionBase,
+    StoriesCarousel,
+    MainProgram,
+    CoursesCarousel,
+  },
   data() {
     return {
       mainNavLinks,
@@ -70,7 +77,9 @@ export default {
     <stories-carousel></stories-carousel>
     <main-program></main-program>
   </section-base>
-  <section-base :section="sectionCourses"></section-base>
+  <section-base :section="sectionCourses">
+    <courses-carousel></courses-carousel>
+  </section-base>
 </template>
 
 <style lang="scss" scoped>
