@@ -6,9 +6,9 @@ export default {
   data() {
     return {
       courses: {
-        name: "Android developers",
+        name: "Android developer",
         teacher: "David Sanders",
-        cost: "free",
+        price: "free",
         description:
           "Lorem ipsum dolor sit amet, te eros consulau pro, quem labores petentium no sea, atqui posidonium entrpretaris",
         people: "1",
@@ -20,5 +20,9 @@ export default {
 </script>
 
 <template>
-  <courses-card :card="courses"></courses-card>
+  <div class="container">
+    <div class="row row-cols-3">
+      <courses-card :course="courses"></courses-card>
+    </div>
+  </div>
 </template>
