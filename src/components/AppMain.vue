@@ -2,10 +2,11 @@
 import NavbarBase from "./NavbarBase.vue";
 import SectionBase from "./SectionBase.vue";
 import StoriesCarousel from "./StoriesCarousel.vue";
+import MainProgram from "./main_child/MainProgram.vue";
 import { mainNavLinks } from "../data";
 export default {
   name: "AppMain",
-  components: { NavbarBase, SectionBase, StoriesCarousel },
+  components: { NavbarBase, SectionBase, StoriesCarousel, MainProgram },
   data() {
     return {
       mainNavLinks,
@@ -57,6 +58,7 @@ export default {
       </div>
     </template>
     <stories-carousel></stories-carousel>
+    <main-program></main-program>
   </section-base>
 </template>
 
@@ -64,7 +66,7 @@ export default {
 @use "../assets/scss/variables" as *;
 
 .info {
-  color: $dodgerblue-text;
+  color: $dodgerblue;
   font-weight: bolder;
   letter-spacing: 2px;
   margin: 15px 0;
