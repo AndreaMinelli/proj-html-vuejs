@@ -1,10 +1,11 @@
 <script>
 import NavbarBase from "./NavbarBase.vue";
 import SectionBase from "./SectionBase.vue";
+import StoriesCarousel from "./StoriesCarousel.vue";
 import { mainNavLinks } from "../data";
 export default {
   name: "AppMain",
-  components: { NavbarBase, SectionBase },
+  components: { NavbarBase, SectionBase, StoriesCarousel },
   data() {
     return {
       mainNavLinks,
@@ -49,12 +50,13 @@ export default {
           <p class="numbers">168</p>
           <p class="numbers-info">User Stories</p>
         </div>
-        <div>
+        <div class="ms-5">
           <p class="numbers">347</p>
           <p class="numbers-info">Events</p>
         </div>
       </div>
     </template>
+    <stories-carousel></stories-carousel>
   </section-base>
 </template>
 
@@ -71,7 +73,6 @@ export default {
     font-family: $secondary-font;
     font-size: 60px;
     font-weight: bolder;
-    margin-right: 200px;
     margin-bottom: 0;
   }
 

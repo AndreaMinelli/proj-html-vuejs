@@ -4,13 +4,17 @@ export default {
   data() {
     return {
       currentActive: 0,
+      interval: null,
     };
   },
   props: {
     images: Array,
     target: String,
     dotClass: String,
+    sliderClasses: Array,
   },
+  emits: ["change-active"],
+
   methods: {
     buildImagePath(image) {
       return new URL(`../assets/img/${this.target}/${image}`, import.meta.url)
@@ -21,14 +25,18 @@ export default {
     },
     changeIndex(i) {
       this.currentActive = i;
+      this.$emit("change-active", this.currentActive);
+      clearInterval(this.interval);
+      this.autoplay();
     },
     autoplay() {
-      setInterval(() => {
+      this.interval = setInterval(() => {
         if (this.currentActive < this.images.length - 1) {
           this.currentActive++;
         } else {
           this.currentActive = 0;
         }
+        this.$emit("change-active", this.currentActive);
       }, 5000);
     },
   },
@@ -45,7 +53,8 @@ export default {
       :style="{
         backgroundImage: `url(${buildImagePath(image)})`,
       }"
-      class="slider">
+      class="slider"
+      :class="sliderClasses">
       <slot></slot>
       <div class="d-flex justify-content-center align-items-center">
         <div
@@ -68,7 +77,7 @@ export default {
 .dot {
   height: 20px;
   width: 20px;
-  border: 1px solid #f2f2f2;
+  border: 1px solid #e5e5e5;
   background-color: #ffffff4d;
   margin: 20px 15px;
   border-radius: 50%;

@@ -30,8 +30,8 @@ export default {
           </figure>
         </div>
       </div>
-      <slot></slot>
     </div>
+    <slot></slot>
   </section>
 </template>
 
