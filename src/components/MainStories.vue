@@ -24,7 +24,7 @@ export default {
   },
   methods: {
     changeUser(i) {
-      this.activeUser = i - 1;
+      this.activeUser = i;
     },
   },
 };

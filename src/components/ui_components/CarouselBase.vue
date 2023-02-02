@@ -18,7 +18,8 @@ export default {
     },
     changeIndex(n) {
       this.currentActive = n;
-      this.$emit("change-active", this.currentActive);
+      const active = this.currentActive - 1;
+      this.$emit("change-active", active);
       clearInterval(this.interval);
       this.autoplay();
     },
@@ -29,7 +30,8 @@ export default {
         } else {
           this.currentActive = 1;
         }
-        this.$emit("change-active", this.currentActive);
+        const active = this.currentActive - 1;
+        this.$emit("change-active", active);
       }, 5000);
     },
   },

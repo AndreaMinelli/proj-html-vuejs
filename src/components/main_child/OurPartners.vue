@@ -5,7 +5,6 @@ export default {
   data() {
     return {
       ourPartners,
-      hover: null,
     };
   },
   methods: {

@@ -115,7 +115,7 @@ export default {
   },
   methods: {
     currentIndex(i) {
-      this.currentActive = i - 1;
+      this.currentActive = i;
     },
   },
 };

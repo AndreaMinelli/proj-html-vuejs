@@ -33,7 +33,7 @@ export default {
   },
   methods: {
     changeIndex(i) {
-      this.currentIndex = i - 1;
+      this.currentIndex = i;
     },
   },
 };
