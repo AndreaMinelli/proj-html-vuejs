@@ -43,8 +43,8 @@ export default {
       backgroundImage: `url(${buildBgUrl})`,
     }">
     <div class="container">
-      <div class="d-flex align-items-center py-4 justify-content-between">
-        <app-logo class="w-25 me-4"></app-logo>
+      <div class="d-flex align-items-end py-4 justify-content-between">
+        <app-logo></app-logo>
         <navbar-base
           :links="headerLinks"
           class="flex-grow-1"
@@ -66,5 +66,11 @@ header {
   background-repeat: no-repeat;
   background-size: auto;
   background-position: center;
+
+  #logo {
+    width: 15%;
+    margin-right: 40px;
+    cursor: pointer;
+  }
 }
 </style>
