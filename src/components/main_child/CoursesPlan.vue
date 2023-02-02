@@ -145,7 +145,6 @@ export default {
 
 .container {
   margin-bottom: 100px;
-  border-bottom: 1px solid $grey-border;
 }
 .col:nth-child(3) {
   .type {

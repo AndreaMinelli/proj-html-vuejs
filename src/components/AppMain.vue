@@ -5,6 +5,7 @@ import StoriesCarousel from "./MainStories.vue";
 import MainProgram from "./main_child/MainProgram.vue";
 import MainCourses from "./MainCourses.vue";
 import CoursesPlan from "./main_child/CoursesPlan.vue";
+import OurPartners from "./main_child/OurPartners.vue";
 import { mainNavLinks } from "../data";
 export default {
   name: "AppMain",
@@ -15,6 +16,7 @@ export default {
     MainProgram,
     MainCourses,
     CoursesPlan,
+    OurPartners,
   },
   data() {
     return {
@@ -25,7 +27,7 @@ export default {
         subTitle:
           "Lorem ipsum gravida nibh vel velit auctor aliquetnean sollicitudin, lorem quis bibendum auci elit consequat ipsutis sem nibh id eis sed odio sit amet nibh vulputate cursus mauris.",
         image: "h5-img-1.jpg",
-        rowClasses: ["row-cols-1"],
+        rowClasses: ["row", "row-cols-1"],
       },
       sectionStories: {
         id: "user-stories",
@@ -33,7 +35,7 @@ export default {
         subTitle:
           "Lorem ipsum gravida nibh vel velit auctor aliquetnean sollicitudin, lorem quis bibendum auci elit consequat ipsutis sem nibh id eis sed odio sit amet nibh vulputate.",
         image: "h5-img-2.jpg",
-        rowClasses: ["row-cols-2", "flex-row-reverse"],
+        rowClasses: ["row", "row-cols-2", "flex-row-reverse"],
         colClasses: ["px-3", "mt-5"],
         figureClasses: ["pt-5"],
       },
@@ -44,7 +46,7 @@ export default {
           "Lorem ipsum gravida nibh vel velit auctor aliquetnean sollicitudin, lorem quis bibendum auci elit consequat ipsutis sem nibh id elit",
         image: "",
         bgImage: "background-pattern.jpg",
-        rowClasses: ["row-cols-1"],
+        rowClasses: ["row", "row-cols-1"],
         colClasses: ["text-center"],
         subTitleClasses: ["w-75", "m-auto"],
       },
@@ -87,7 +89,9 @@ export default {
     <main-courses></main-courses>
     <courses-plan></courses-plan>
   </section-base>
-  <section-base :section="sectionPartners"></section-base>
+  <section-base :section="sectionPartners">
+    <our-partners></our-partners>
+  </section-base>
 </template>
 
 <style lang="scss" scoped>

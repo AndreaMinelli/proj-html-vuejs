@@ -27,8 +27,8 @@ export default {
     :style="{
       backgroundImage: `url(${buildBgImageUrl})`,
     }">
-    <div class="container">
-      <div class="row" :class="section.rowClasses">
+    <div v-if="section.rowClasses" class="container">
+      <div :class="section.rowClasses">
         <div class="col my-4" :class="section.colClasses">
           <h2 :class="section.titleClasses">{{ section.title }}</h2>
           <p :class="section.subTitleClasses">{{ section.subTitle }}</p>

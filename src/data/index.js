@@ -85,4 +85,27 @@ const userStories = [
   },
 ];
 
-export { headerLinks, headerSlider, mainNavLinks, userStories };
+const ourPartners = [
+  {
+    name: "iAcademy",
+    image: "h5-client-5",
+    link: "#",
+  },
+  {
+    name: "Study Central",
+    image: "h5-client-1",
+    link: "#",
+  },
+  {
+    name: "Educator",
+    image: "h5-client-2",
+    link: "#",
+  },
+  {
+    name: "Study Central University",
+    image: "h5-client-1",
+    link: "#",
+  },
+];
+
+export { headerLinks, headerSlider, mainNavLinks, userStories, ourPartners };
