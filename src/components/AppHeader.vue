@@ -44,7 +44,7 @@ export default {
     }">
     <div class="container">
       <div class="d-flex align-items-center py-4 justify-content-between">
-        <app-logo class="w-25"></app-logo>
+        <app-logo class="w-25 me-4"></app-logo>
         <navbar-base
           :links="headerLinks"
           class="flex-grow-1"

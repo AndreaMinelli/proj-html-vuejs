@@ -6,6 +6,8 @@ import { faUser } from "@fortawesome/free-solid-svg-icons";
 import { faTag } from "@fortawesome/free-solid-svg-icons";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
 import { faX } from "@fortawesome/free-solid-svg-icons";
+import { faPhone } from "@fortawesome/free-solid-svg-icons";
+import { faClock } from "@fortawesome/free-regular-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 
 library.add(
@@ -15,7 +17,9 @@ library.add(
   faUser,
   faTag,
   faCheck,
-  faX
+  faX,
+  faPhone,
+  faClock
 );
 
 export const fontAwesome = { FontAwesomeIcon };

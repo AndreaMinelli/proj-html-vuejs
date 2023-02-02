@@ -7,7 +7,11 @@ export default {
 </script>
 
 <template>
-  <footer-top></footer-top>
+  <footer>
+    <div class="container">
+      <footer-top></footer-top>
+    </div>
+  </footer>
 </template>
 
 <style scoped>

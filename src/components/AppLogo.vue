@@ -5,7 +5,7 @@ export default {
 </script>
 
 <template>
-  <figure>
+  <figure id="logo">
     <img src="../assets/img/logo-light.png" alt="Logo iAccademy" />
   </figure>
 </template>
