@@ -106,7 +106,6 @@ export default {
 .row {
   padding: 100px 0;
   color: #cecece;
-  border-bottom: 1px solid $darkgrey-border;
 
   #logo {
     width: 150px;
