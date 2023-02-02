@@ -4,6 +4,7 @@ import SectionBase from "./SectionBase.vue";
 import StoriesCarousel from "./MainStories.vue";
 import MainProgram from "./main_child/MainProgram.vue";
 import MainCourses from "./MainCourses.vue";
+import CoursesPlan from "./main_child/CoursesPlan.vue";
 import { mainNavLinks } from "../data";
 export default {
   name: "AppMain",
@@ -13,6 +14,7 @@ export default {
     StoriesCarousel,
     MainProgram,
     MainCourses,
+    CoursesPlan,
   },
   data() {
     return {
@@ -80,6 +82,7 @@ export default {
   </section-base>
   <section-base :section="sectionCourses">
     <main-courses></main-courses>
+    <courses-plan></courses-plan>
   </section-base>
 </template>
 
