@@ -7,6 +7,7 @@ import { faTag } from "@fortawesome/free-solid-svg-icons";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
 import { faX } from "@fortawesome/free-solid-svg-icons";
 import { faPhone } from "@fortawesome/free-solid-svg-icons";
+import { faChevronUp } from "@fortawesome/free-solid-svg-icons";
 import { faClock } from "@fortawesome/free-regular-svg-icons";
 import { faTwitter } from "@fortawesome/free-brands-svg-icons";
 import { faInstagram } from "@fortawesome/free-brands-svg-icons";
@@ -25,7 +26,8 @@ library.add(
   faClock,
   faTwitter,
   faInstagram,
-  faFacebookF
+  faFacebookF,
+  faChevronUp
 );
 
 export const fontAwesome = { FontAwesomeIcon };

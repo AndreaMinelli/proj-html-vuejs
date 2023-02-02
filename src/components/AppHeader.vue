@@ -5,6 +5,7 @@ import NavbarBase from "./NavbarBase.vue";
 import CarouselBase from "./ui_components/CarouselBase.vue";
 import HeaderFunction from "./header_child/HeaderFunction.vue";
 import HeaderJumbotron from "./header_child/HeaderJumbotron.vue";
+import GoTopSquare from "./ui_components/GoTopSquare.vue";
 export default {
   name: "AppHeader",
   components: {
@@ -13,6 +14,7 @@ export default {
     HeaderFunction,
     HeaderJumbotron,
     CarouselBase,
+    GoTopSquare,
   },
   data() {
     return {
@@ -44,6 +46,7 @@ export default {
     }">
     <div class="container">
       <div class="d-flex align-items-end py-4 justify-content-between">
+        <go-top-square></go-top-square>
         <app-logo></app-logo>
         <navbar-base
           :links="headerLinks"
