@@ -107,7 +107,7 @@ export default {
   padding: 100px 0;
   color: #cecece;
 
-  #logo {
+  .logo {
     width: 150px;
   }
 

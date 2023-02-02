@@ -70,10 +70,9 @@ header {
   background-size: auto;
   background-position: center;
 
-  #logo {
+  .logo {
     width: 15%;
     margin-right: 40px;
-    cursor: pointer;
   }
 }
 </style>
