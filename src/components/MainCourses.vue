@@ -123,7 +123,7 @@ export default {
 
 <template>
   <div class="container">
-    <div class="row row-cols-3">
+    <div class="row row-cols-3 gx-5">
       <courses-card
         v-for="course in visibleCourses"
         :course="course"
@@ -137,6 +137,9 @@ export default {
 </template>
 
 <style scoped>
+.container {
+  margin-bottom: 150px;
+}
 .row {
   margin: 80px 0 40px;
 }
