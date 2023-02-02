@@ -40,7 +40,10 @@ export default {
         <blockquote>{{ displayUser.quote }}</blockquote>
         <h3>{{ displayUser.name }}</h3>
         <p class="job">{{ displayUser.job }}</p>
-        <carousel-base :times="3" @change-active="changeUser"></carousel-base>
+        <carousel-base
+          :times="3"
+          @change-active="changeUser"
+          :dotClass="['white']"></carousel-base>
       </div>
     </div>
   </div>

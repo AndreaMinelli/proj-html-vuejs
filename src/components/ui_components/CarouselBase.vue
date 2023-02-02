@@ -20,7 +20,7 @@ export default {
       this.currentActive = n;
       this.$emit("change-active", this.currentActive);
       clearInterval(this.interval);
-      //this.autoplay();
+      this.autoplay();
     },
     autoplay() {
       this.interval = setInterval(() => {
@@ -34,7 +34,7 @@ export default {
     },
   },
   created() {
-    // this.autoplay();
+    this.autoplay();
   },
 };
 </script>
@@ -72,8 +72,14 @@ export default {
       box-shadow: inset 0 0 0 4px white, 0 0 0 2px white;
     }
   }
+  &.white {
+    height: 15px;
+    width: 15px;
+  }
   &.blue {
     background-color: #9ce0ff;
+    height: 15px;
+    width: 15px;
 
     &.active {
       background-color: $dodgerblue;
