@@ -1,0 +1,11 @@
+@use "./variables" as *;
+@mixin button-style($style) {
+  @if ($style == "primary") {
+    background-color: $dodgerblue;
+    color: white;
+  } @else if ($style == "secondary") {
+    background-color: white;
+    border: 1px solid $darkgrey-border;
+    color: $grey-text;
+  }
+}

@@ -121,13 +121,13 @@ export default {
 
 <style lang="scss" scoped>
 @use "../../assets/scss/variables" as *;
+@use "../../assets/scss/mixin" as *;
 .col:nth-child(3) {
   .type {
     border-top: 4px solid $dodgerblue;
   }
   .button {
-    background-color: $dodgerblue;
-    color: white;
+    @include button-style("primary");
   }
 }
 .title {
