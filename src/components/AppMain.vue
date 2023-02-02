@@ -48,6 +48,9 @@ export default {
         colClasses: ["text-center"],
         subTitleClasses: ["w-75", "m-auto"],
       },
+      sectionPartners: {
+        id: "our-partners",
+      },
     };
   },
 };
@@ -84,6 +87,7 @@ export default {
     <main-courses></main-courses>
     <courses-plan></courses-plan>
   </section-base>
+  <section-base :section="sectionPartners"></section-base>
 </template>
 
 <style lang="scss" scoped>

@@ -122,14 +122,7 @@ export default {
 <style lang="scss" scoped>
 @use "../../assets/scss/variables" as *;
 @use "../../assets/scss/mixin" as *;
-.col:nth-child(3) {
-  .type {
-    border-top: 4px solid $dodgerblue;
-  }
-  .button {
-    @include button-style("primary");
-  }
-}
+
 .title {
   border-top: 2px solid $darkgrey-border;
   text-align: center;
@@ -149,9 +142,24 @@ export default {
     line-height: 35px;
   }
 }
+
+.container {
+  margin-bottom: 100px;
+  border-bottom: 1px solid $grey-border;
+}
+.col:nth-child(3) {
+  .type {
+    border-top: 4px solid $dodgerblue;
+  }
+  .button {
+    @include button-style("primary");
+  }
+}
+
 ul {
   padding: 0;
 }
+
 li {
   color: $grey-text;
   border: 1px solid $grey-border;
