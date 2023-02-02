@@ -1,8 +1,10 @@
 <script>
 import ButtonBase from "../ui_components/ButtonBase.vue";
+import AddCart from "../ui_components/AddCart.vue";
+import GoToWorkspace from "../ui_components/GoToWorkspace.vue";
 export default {
   name: "CoursesPlan",
-  components: { ButtonBase },
+  components: { ButtonBase, AddCart, GoToWorkspace },
   data() {
     return {
       plans: [
@@ -82,6 +84,10 @@ export default {
   </div>
   <div class="container">
     <div class="row row-cols-4 gx-0">
+      <div class="function">
+        <go-to-workspace class="mb-3"></go-to-workspace>
+        <add-cart></add-cart>
+      </div>
       <div class="col">
         <ul class="info">
           <li><h3>Save up to 40% by paying weekly</h3></li>
@@ -141,6 +147,14 @@ export default {
     color: #808080;
     line-height: 35px;
   }
+}
+.row {
+  position: relative;
+}
+.function {
+  position: absolute;
+  left: 100%;
+  top: 50px;
 }
 
 .container {
