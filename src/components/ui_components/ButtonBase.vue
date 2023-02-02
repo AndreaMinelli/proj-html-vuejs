@@ -20,6 +20,7 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+@use "../../assets/scss/variables" as *;
 .button {
   padding: 15px 60px;
   font-size: 20px;
@@ -29,8 +30,18 @@ export default {
   letter-spacing: 2px;
 
   &.primary {
-    background-color: #40c4ff;
+    background-color: $dodgerblue;
     color: white;
+  }
+
+  &.secondary {
+    background-color: white;
+    border: 1px solid $darkgrey-border;
+    color: $grey-text;
+  }
+
+  &.bold {
+    font-weight: bold;
   }
 }
 </style>

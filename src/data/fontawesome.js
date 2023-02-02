@@ -4,8 +4,18 @@ import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { faBagShopping } from "@fortawesome/free-solid-svg-icons";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
 import { faTag } from "@fortawesome/free-solid-svg-icons";
+import { faCheck } from "@fortawesome/free-solid-svg-icons";
+import { faX } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 
-library.add(faMagnifyingGlass, faBars, faBagShopping, faUser, faTag);
+library.add(
+  faMagnifyingGlass,
+  faBars,
+  faBagShopping,
+  faUser,
+  faTag,
+  faCheck,
+  faX
+);
 
 export const fontAwesome = { FontAwesomeIcon };
