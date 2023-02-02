@@ -160,7 +160,7 @@ export default {
 .container {
   margin-bottom: 100px;
 }
-.col:nth-child(3) {
+.col:nth-child(4) {
   .type {
     border-top: 4px solid $dodgerblue;
   }
