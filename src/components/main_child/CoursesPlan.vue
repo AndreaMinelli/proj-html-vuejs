@@ -155,6 +155,7 @@ export default {
   position: absolute;
   left: 100%;
   top: 50px;
+  width: auto;
 }
 
 .container {
